@@ -3,23 +3,36 @@ package chiarafais.entities;
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
+import jakarta.persistence.NamedQuery;
 
 import java.time.LocalDate;
 
 @Entity
-//@DiscriminatorValue("elemento_libro")
+@DiscriminatorValue("elemento_libro")
+@NamedQuery(
+        name = "libroPerAnnoPubblicazione",
+        query = "SELECT l FROM Libro l WHERE l.annoPubblicazione = :annoPubblicazione"
+)
+@NamedQuery(
+        name = "libroPerAutore",
+        query = "SELECT l FROM Libro l WHERE l.autore LIKE :autore"
+)
+@NamedQuery(
+        name = "libroPerTitolo",
+        query = "SELECT l FROM Libro l WHERE l.titolo LIKE :titolo"
+)
 public class Libro extends ElementoCatalogo{
-    @Column
+    @Column(nullable = false)
     private String autore;
-    @Column
+    @Column(nullable = false)
     private String genere;
 
     public Libro(){
 
     }
 
-    public Libro(long isbn, String titolo, LocalDate annoPubblicazione, int numeroPagine, String autore, String genere) {
-        super(isbn, titolo, annoPubblicazione, numeroPagine);
+    public Libro( String titolo, int annoPubblicazione, int numeroPagine, String autore, String genere) {
+        super( titolo, annoPubblicazione, numeroPagine);
         this.autore=autore;
         this.genere=genere;
     }

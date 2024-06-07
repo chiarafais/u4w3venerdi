@@ -7,11 +7,11 @@ import java.util.List;
 
 @Entity
 public class Utente {
-    @Column
+    @Column(nullable = false)
     private String nome;
-    @Column
+    @Column(nullable = false)
     private String cognome;
-    @Column
+    @Column(nullable = false)
     private LocalDate dataDiNascita;
 
     @Id

@@ -7,16 +7,17 @@ import java.util.List;
 
 @Entity
 @Table (name="elemento_bibliografico")
-@Inheritance(strategy= InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy= InheritanceType.JOINED)
+@DiscriminatorColumn
 public abstract class ElementoCatalogo {
     @Id
     @GeneratedValue
     protected long isbn;
-    @Column
+    @Column(nullable = false)
     protected String titolo;
-    @Column
-    protected LocalDate annoPubblicazione;
-    @Column
+    @Column(nullable = false)
+    protected int annoPubblicazione;
+    @Column(nullable = false)
     protected int numeroPagine;
     @OneToMany(mappedBy = "isbn")
     private List<ElementoCatalogo> elementoCatalogoList;
@@ -25,8 +26,7 @@ public abstract class ElementoCatalogo {
 
     }
 
-    public ElementoCatalogo(long isbn, String titolo, LocalDate annoPubblicazione, int numeroPagine) {
-        this.isbn = isbn;
+    public ElementoCatalogo( String titolo, int annoPubblicazione, int numeroPagine) {
         this.titolo=titolo;
         this.annoPubblicazione=annoPubblicazione;
         this.numeroPagine=numeroPagine;
@@ -56,11 +56,11 @@ public abstract class ElementoCatalogo {
         this.titolo = titolo;
     }
 
-    public LocalDate getAnnoPubblicazione() {
+    public int getAnnoPubblicazione() {
         return annoPubblicazione;
     }
 
-    public void setAnnoPubblicazione(LocalDate annoPubblicazione) {
+    public void setAnnoPubblicazione(int annoPubblicazione) {
         this.annoPubblicazione = annoPubblicazione;
     }
 

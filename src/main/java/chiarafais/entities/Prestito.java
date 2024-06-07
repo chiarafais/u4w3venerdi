@@ -5,6 +5,14 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
+@NamedQuery(
+        name = "PrestitiPerUtente",
+        query = "SELECT p FROM Prestito p WHERE p.utente.numeroDiTessera = :numeroTessera AND p.dataRestituzioneEffettiva IS NULL"
+)
+@NamedQuery(
+        name = "PrestitiScadutiNonRestituiti",
+        query = "SELECT p FROM Prestito p WHERE p.dataRestituzioneEffettiva < CURRENT_DATE AND dataRestituzioneEffettiva<dataRestituzionePrevista"
+)
 public class Prestito {
     @ManyToOne
     @Id
@@ -14,21 +22,20 @@ public class Prestito {
     @ManyToOne
     @JoinColumn(name="isbn_id")
     private ElementoCatalogo elementoPrestato;
-
     @Column
     private LocalDate dataInizioPrestito;
-
     @Column
     private LocalDate dataRestituzionePrevista;
-
     @Column
     private LocalDate dataRestituzioneEffettiva;
+
+
 
 
     public Prestito() {
     }
 
-    public Prestito(Utente utente, LocalDate dataInizioPrestito, ElementoCatalogo elementoPrestato, LocalDate dataRestituzionePrevista, LocalDate dataRestituzioneEffettiva) {
+    public Prestito(Utente utente, LocalDate dataInizioPrestito, ElementoCatalogo elementoPrestato, LocalDate dataRestituzioneEffettiva) {
         this.utente = utente;
         this.dataInizioPrestito = dataInizioPrestito;
         this.elementoPrestato = elementoPrestato;

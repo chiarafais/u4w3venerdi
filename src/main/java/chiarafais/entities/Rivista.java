@@ -7,19 +7,27 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-//@DiscriminatorValue("elemento_rivista")
+@DiscriminatorValue("elemento_rivista")
+@NamedQuery(
+        name = "rivistaPerAnnoPubblicazione",
+        query = "SELECT r FROM Rivista r WHERE r.annoPubblicazione = :annoPubblicazione"
+)
+@NamedQuery(
+        name = "rivistaPerTitolo",
+        query = "SELECT r FROM Rivista r WHERE r.titolo LIKE :titolo"
+)
 public class Rivista extends ElementoCatalogo{
 
     @Enumerated(EnumType.STRING)
-    @Column
+    @Column(nullable = false)
     private TipoRivista tipoRivista;
 
     public Rivista (){
 
     }
 
-    public Rivista(long isbn, String titolo, LocalDate annoPubblicazione, int numeroPagine, TipoRivista tipoRivista) {
-        super(isbn, titolo, annoPubblicazione, numeroPagine);
+    public Rivista(String titolo, int annoPubblicazione, int numeroPagine, TipoRivista tipoRivista) {
+        super( titolo, annoPubblicazione, numeroPagine);
         this.tipoRivista=tipoRivista;
     }
 
