@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c27a4f56-fa39-496c-aec5-5d76ebff7046" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/chiarafais/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chiarafais/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chiarafais/entities/Prestito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chiarafais/entities/Prestito.java" afterDir="false" />
-    </list>
+    <list default="true" id="c27a4f56-fa39-496c-aec5-5d76ebff7046" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

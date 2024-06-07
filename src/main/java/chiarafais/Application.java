@@ -80,7 +80,7 @@ public class Application {
         Utente chiaraTessera = ud.findById(1);
         PrestitiDAO pd = new PrestitiDAO(em);
         Prestito prestito1 = new Prestito(chiaraTessera,LocalDate.of(2024,5,7),rivistaISBN6,LocalDate.of(2024,6,3));
-        pd.save(prestito1);
+//        pd.save(prestito1);
 
 
         pd.PrestitiPerUtente(1);
