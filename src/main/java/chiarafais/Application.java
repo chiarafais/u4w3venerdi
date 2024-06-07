@@ -76,11 +76,18 @@ public class Application {
         ld.libroPerTitolo("devo");
         rd.rivistaPerTitolo("questa è una rivista");
 
-//        System.out.println("**********************Ricerca degli elementi attualmente in prestito tramite un numero di tessera utente************************");
-//        PrestitiDAO pd = new PrestitiDAO(em);
-//        Prestito prestito1 = new Prestito(chiara,LocalDate.of(2024,5,7),rivistaISBN6,LocalDate.of(2024,6,3));
-//        pd.save(prestito1);
+        System.out.println("**********************Ricerca degli elementi attualmente in prestito tramite un numero di tessera utente************************");
+        Utente chiaraTessera = ud.findById(1);
+        PrestitiDAO pd = new PrestitiDAO(em);
+        Prestito prestito1 = new Prestito(chiaraTessera,LocalDate.of(2024,5,7),rivistaISBN6,LocalDate.of(2024,6,3));
+        pd.save(prestito1);
 
+
+        pd.PrestitiPerUtente(1);
+        pd.PrestitiScadutiNonRestituiti();
+
+        em.close();
+        emf.close();
 
         System.out.println("Hello World!");
     }

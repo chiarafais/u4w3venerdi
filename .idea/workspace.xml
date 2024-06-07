@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c27a4f56-fa39-496c-aec5-5d76ebff7046" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chiarafais/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chiarafais/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chiarafais/dao/LibriDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chiarafais/dao/LibriDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chiarafais/dao/PrestitiDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chiarafais/dao/PrestitiDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chiarafais/dao/RivisteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chiarafais/dao/RivisteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chiarafais/dao/UtentiDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chiarafais/dao/UtentiDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chiarafais/entities/ElementoCatalogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chiarafais/entities/ElementoCatalogo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chiarafais/entities/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chiarafais/entities/Libro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chiarafais/entities/Prestito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chiarafais/entities/Prestito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chiarafais/entities/Rivista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chiarafais/entities/Rivista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chiarafais/entities/Utente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chiarafais/entities/Utente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
