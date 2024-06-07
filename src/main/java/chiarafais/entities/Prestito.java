@@ -14,8 +14,11 @@ import java.time.LocalDate;
         query = "SELECT p FROM Prestito p WHERE p.dataRestituzioneEffettiva < CURRENT_DATE AND dataRestituzioneEffettiva<dataRestituzionePrevista"
 )
 public class Prestito {
-    @ManyToOne
     @Id
+    @GeneratedValue
+    private long id;
+    @ManyToOne
+
     @JoinColumn(name="utente_id")
 
     private Utente utente;

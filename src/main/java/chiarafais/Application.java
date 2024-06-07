@@ -66,8 +66,8 @@ public class Application {
 //        ld.deleteByIsbn(1);
 
         System.out.println("**********************Ricerca per anno di pubblicazione libro/rivista************************");
-           ld.libroPerAnnoPubblicazione(2010);
-           rd.rivistaPerAnnoPubblicazione(2014);
+        ld.libroPerAnnoPubblicazione(2010);
+        rd.rivistaPerAnnoPubblicazione(2014);
 
         System.out.println("**********************Ricerca libro per autore, le riviste non hanno autore!************************");
         ld.libroPerAutore("maddalena");
